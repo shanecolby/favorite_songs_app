@@ -3,4 +3,8 @@ class Api::SongsController < ApplicationController
     @songs = Song.all
     render "index.json.jb"
   end
+
+  def show
+    render "show.json.jb"
+  end
 end
