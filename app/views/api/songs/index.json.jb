@@ -1,4 +1,8 @@
-{
-  @songs
-  message: "index hello"
-}
+@songs.map do |song|
+  {
+    title: song.title,
+    album: song.album,
+    artist: song.artist,
+    year: song.year
+  }
+end
