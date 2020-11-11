@@ -10,4 +10,19 @@ class Api::SongsController < ApplicationController
   end
 
 
+  def create
+    @song = Song.new(
+      title: params[:title], 
+      album: params[:album], 
+      artist: params[:artist], 
+      year: params[:year])
+      @song.save
+    render "show.json.jb"
+  end
+
+  # def update
+  #   render "show.json.jb"
+  # end
+
+
 end
