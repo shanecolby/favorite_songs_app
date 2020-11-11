@@ -27,6 +27,7 @@ class Api::SongsController < ApplicationController
     @song.album = params[:album]
     @song.artist = params[:artist]
     @song.year = params[:year]
+    @song.save
 
 
     render "show.json.jb"
